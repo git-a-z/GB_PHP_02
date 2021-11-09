@@ -92,6 +92,8 @@
   {
     protected static $self;
 
+    private function __construct(){}
+
     public static function getSingleton()
     {
       if (self::$self === null) {
@@ -120,6 +122,10 @@
   $test2 = Test::getSingleton();
   echo $test2->value; // 42
   echo '<br>';
+
+  // $test3 = new Test;
+  // echo $test3->value; // 0
+  // echo '<br>';
 ?>  
 </body>
 </html>
