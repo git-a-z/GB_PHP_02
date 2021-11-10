@@ -67,7 +67,7 @@
 
     public function getFinalPrice() 
     {
-      echo $this->getName() . ' costs: ' . $this->price * $this->weight . '<br>';
+      echo $this->getName() . ' costs: ' . round($this->price * $this->weight, 2) . '<br>';
     }
   }
  
