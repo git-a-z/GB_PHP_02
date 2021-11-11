@@ -90,9 +90,11 @@
 
   trait SingletonTrait
   {
-    protected static $self;
+    private static $self;
 
     private function __construct(){}
+    
+    private function __clone(){}
 
     public static function getSingleton()
     {
