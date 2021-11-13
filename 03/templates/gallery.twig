@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <hr><br>
+  <menu>1. Создать галерею изображений, состоящую из двух страниц:
+    <li>а) Просмотр всех фотографий (уменьшенных копий);</li>
+    <li>б) Просмотр конкретной фотографии (изображение оригинального размера);</li>
+    <li>в) Все страницы вывода на экран – это twig-шаблоны. Вся логика – на бэкенде;</li>
+    <li>г) *Реализовать хранение ссылок и информации по картинкам в БД;</li>
+  </menu><br>
+
+  <div class="container">
+    {% for image in images %}
+    <a href="preview.php?id={{ image.id }}" target="_blank">
+      <img src={{ image.image_path }} class="img">
+    </a>
+    {% endfor %}
+  </div>
+</body>
+</html>
