@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catalog{% endblock %}
+
+{% block body %}
+<style>
+</style>
+
+<div class="container">
+    {% for product in allProducts %}
+        <a href="product.php?id={{ product.id }}" target="_blank">
+        <img src="../src/img/{{ product.imagePath }}" class="img">
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}

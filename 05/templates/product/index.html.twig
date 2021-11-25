@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+<style>
+</style>
+
+<div class="container">
+    <div class="image_container">
+      <img src="../src/img/{{ product.imagePath }}">
+      <span>Просмотров: {{ product.clicks }} (id = {{ product.id }})</span>
+    </div>
+</div>
+{% endblock %}
